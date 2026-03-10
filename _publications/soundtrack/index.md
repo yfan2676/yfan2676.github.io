@@ -12,7 +12,7 @@ authors:
 venue: "IMWUT / UbiComp"
 year: 2025
 date: 2025-06-01
-teaser: teaser.svg
+teaser: teaser.png
 links:
   - label: DOI
     url: https://doi.org/10.1145/3729486
