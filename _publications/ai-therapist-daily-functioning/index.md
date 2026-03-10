@@ -18,6 +18,6 @@ teaser: teaser.png
 awards:
   - "🏆 Best Demo Runner-Up"
 links:
-  - label: DOI
+  - label: ACM DL
     url: https://doi.org/10.1145/3560905.3568074
 ---

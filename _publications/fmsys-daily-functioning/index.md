@@ -11,6 +11,6 @@ year: 2024
 date: 2024-10-01
 teaser: teaser.png
 links:
-  - label: DOI
+  - label: IEEE Xplore
     url: https://doi.org/10.1109/FMSys62467.2024.00012
 ---

@@ -17,6 +17,6 @@ year: 2023
 date: 2023-06-01
 teaser: teaser.png
 links:
-  - label: DOI
+  - label: ACM DL
     url: https://doi.org/10.1145/3575813.3597350
 ---

@@ -14,6 +14,6 @@ year: 2025
 date: 2025-02-01
 teaser: teaser.png
 links:
-  - label: DOI
+  - label: ACM DL
     url: https://doi.org/10.1145/3712299
 ---
