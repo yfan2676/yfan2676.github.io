@@ -40,9 +40,10 @@
           {% if page.authors %}
             <p class="publication-authors">
               {% if page.authors.first %}
-                {{ page.authors | join: ", " }}
+                {% assign authors_text = page.authors | join: ", " | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" %}
+                {{ authors_text }}
               {% else %}
-                {{ page.authors }}
+                {{ page.authors | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" }}
               {% endif %}
             </p>
           {% endif %}

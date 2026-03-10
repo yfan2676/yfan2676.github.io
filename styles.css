@@ -380,6 +380,11 @@ h3 {
   margin-top: 10px;
 }
 
+.publication-authors strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .publication-venue {
   margin-top: 4px;
   font-size: 0.98rem;

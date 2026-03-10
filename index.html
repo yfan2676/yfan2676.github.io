@@ -38,12 +38,13 @@ layout: null
             <p class="eyebrow">Columbia University · Intelligent and Connected Systems Lab</p>
             <h1>Yuang Fan</h1>
             <p class="intro-role">
-              PhD student in Electrical Engineering working on multimodal sensing, mobile
-              systems, and human-centered AI.
+              PhD student in Electrical Engineering working on foundation models,
+              reinforcement learning, multimodal reasoning, and real-world sensing.
             </p>
             <p class="intro-summary">
-              My research focuses on computer vision, acoustic sensing, foundation models,
-              and deployable systems for health and everyday environments.
+              I study how large AI systems can generalize across noisy behavioral, sensor,
+              and visual data, with an emphasis on healthcare and embodied sensing
+              environments.
             </p>
             <div class="link-row" aria-label="Primary links">
               <a
@@ -126,7 +127,7 @@ layout: null
               </div>
               <div>
                 <dt>Research Areas</dt>
-                <dd>Multimodal sensing, vision, mobile health, foundation models</dd>
+                <dd>Foundation models, RL, multimodal reasoning, real-world sensing</dd>
               </div>
               <div>
                 <dt>Email</dt>
@@ -143,15 +144,16 @@ layout: null
           </div>
           <div class="prose-grid">
             <p>
-              I study how AI systems can interpret images, speech, breathing, and
-              environmental audio to support health, wellbeing, and intelligent
-              environments. I am especially interested in models and sensing pipelines that
-              remain useful outside of carefully controlled lab settings.
+              My research focuses on advancing foundation models through reinforcement
+              learning, multimodal reasoning, and integration with real-world sensing
+              systems. I am especially interested in improving generalization, robustness,
+              and abstraction when models operate on longitudinal behavioral, sensor, and
+              visual data.
             </p>
             <p>
-              My recent work spans top-down visual reasoning benchmarks, contactless audio
-              sensing for exercise, multimodal physiological datasets, and foundation-model
-              applications in healthcare-adjacent settings.
+              Recent work spans top-down image understanding benchmarks, contactless audio
+              sensing for exercise, multimodal physiological datasets, psychotherapeutic
+              monitoring, and deployable mobile systems for health-related applications.
             </p>
           </div>
         </section>
@@ -163,24 +165,24 @@ layout: null
           </div>
           <div class="research-list">
             <article>
-              <h3>Multimodal sensing for health</h3>
+              <h3>RL-tuned foundation models</h3>
               <p>
-                Building audio and biosignal systems that estimate exercise and physiological
-                states from everyday devices and unconstrained environments.
+                Fine-tuning reasoning-oriented language models for robust behavioral and
+                mental health prediction under dataset heterogeneity and distribution shift.
               </p>
             </article>
             <article>
-              <h3>Vision-language model evaluation</h3>
+              <h3>Top-down and multimodal reasoning</h3>
               <p>
-                Studying how multimodal foundation models reason about top-down imagery,
-                scene structure, and spatial relationships.
+                Studying how multimodal models reason about top-down imagery, spatial
+                relationships, and semantically structured sensor and behavioral signals.
               </p>
             </article>
             <article>
-              <h3>Human-centered AI systems</h3>
+              <h3>Real-world sensing systems</h3>
               <p>
-                Exploring AI tools for screening, interpretation, and intervention in smart
-                environments with attention to practical deployment and user impact.
+                Building deployable audio, vision, and mobile systems for health, smart
+                environments, and everyday embodied sensing applications.
               </p>
             </article>
           </div>
@@ -189,7 +191,7 @@ layout: null
         <section class="section reveal" id="publications">
           <div class="section-heading">
             <p class="eyebrow">Publications</p>
-            <h2>Selected papers</h2>
+            <h2>Selected publications</h2>
             <p class="section-note">
               Add a new subfolder in <code>_publications/</code> by copying the template.
               GitHub Pages will include it automatically on the next build.
@@ -217,9 +219,10 @@ layout: null
                   {% if publication.authors %}
                     <p class="publication-authors">
                       {% if publication.authors.first %}
-                        {{ publication.authors | join: ", " }}
+                        {% assign authors_text = publication.authors | join: ", " | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" %}
+                        {{ authors_text }}
                       {% else %}
-                        {{ publication.authors }}
+                        {{ publication.authors | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" }}
                       {% endif %}
                     </p>
                   {% endif %}
@@ -259,28 +262,35 @@ layout: null
               <span class="timeline-year">2025-present</span>
               <div>
                 <h3>PhD Student, Electrical Engineering</h3>
-                <p>Columbia University, Intelligent and Connected Systems Lab.</p>
+                <p>Columbia University. Advisors: Xiaofan Jiang and Xuhai Xu.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-year">2025-2026</span>
+              <div>
+                <h3>Teaching Assistant</h3>
+                <p>AIoT: Artificial Intelligence for Internet of Things and Embedded AI.</p>
               </div>
             </article>
             <article class="timeline-item">
               <span class="timeline-year">2025</span>
               <div>
-                <h3>Workshop Service</h3>
-                <p>Social Media Chair, HumanSys 2025.</p>
+                <h3>Reviewer</h3>
+                <p>ACM IMWUT and ACM Transactions on Computing for Healthcare.</p>
               </div>
             </article>
             <article class="timeline-item">
-              <span class="timeline-year">2023-2025</span>
+              <span class="timeline-year">2023-2024</span>
               <div>
                 <h3>MS in Computer Science</h3>
-                <p>Columbia University.</p>
+                <p>Columbia University. GPA: 3.95.</p>
               </div>
             </article>
             <article class="timeline-item">
               <span class="timeline-year">2019-2023</span>
               <div>
-                <h3>BS in Computer Science</h3>
-                <p>New York University.</p>
+                <h3>BA in Computer Science</h3>
+                <p>New York University. GPA: 3.97, summa cum laude.</p>
               </div>
             </article>
           </div>
@@ -338,6 +348,7 @@ layout: null
               </svg>
               <span class="sr-only">Google Scholar</span>
             </a>
+            <a href="https://www.linkedin.com/in/yuang-fan/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://openreview.net/profile?id=~Yuang_Fan1" target="_blank" rel="noreferrer">OpenReview</a>
             <a
               class="icon-link"

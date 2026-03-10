@@ -3,7 +3,7 @@ title: "LLM-based Conversational AI Therapist for Daily Functioning Screening an
 slug: llm-therapist
 authors:
   - Jingping Nie
-  - Hanya Shao
+  - Hanya V. Shao
   - Yuang Fan
   - Qijia Shao
   - Haoxuan You

@@ -1,5 +1,5 @@
 ---
-title: "TDBench: Benchmarking Vision Language Models on Top-Down Image Understanding"
+title: "TDBench: A Benchmark for Top-Down Image Understanding with Reliability Analysis of Vision-Language Models"
 slug: tdbench
 authors:
   - Kaiyuan Hou
@@ -7,12 +7,11 @@ authors:
   - Lilin Xu
   - Yuang Fan
   - Xiaofan Jiang
-venue: "ICLR"
-status: "Submission"
-year: 2026
-date: 2026-01-01
+venue: "arXiv"
+year: 2025
+date: 2025-04-01
 teaser: teaser.svg
 links:
-  - label: OpenReview
-    url: https://openreview.net/forum?id=3Pf8UOO4lh
+  - label: arXiv
+    url: https://arxiv.org/abs/2504.03748
 ---
