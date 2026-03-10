@@ -374,6 +374,23 @@ h3 {
   font-size: 0.98rem;
 }
 
+.publication-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.publication-meta-row .publication-venue,
+.publication-meta-row .publication-links {
+  margin-top: 0;
+}
+
+.publication-meta-row .publication-links {
+  justify-content: flex-end;
+}
+
 .publication-awards {
   display: flex;
   flex-wrap: wrap;
@@ -564,6 +581,15 @@ h3 {
 
   .publication-teaser {
     max-width: 360px;
+  }
+
+  .publication-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .publication-meta-row .publication-links {
+    justify-content: flex-start;
   }
 
   .timeline-item {

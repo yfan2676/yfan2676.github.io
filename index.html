@@ -196,30 +196,34 @@ layout: null
                     </p>
                   {% endif %}
 
-                  {% if publication.venue or publication.status or publication.year %}
-                    <p class="publication-venue">
-                      {% if publication.venue %}{{ publication.venue }}{% endif %}
-                      {% if publication.status %}
-                        {% if publication.venue %} · {% endif %}{{ publication.status }}
+                  {% if publication.venue or publication.status or publication.year or publication.links %}
+                    <div class="publication-meta-row">
+                      {% if publication.venue or publication.status or publication.year %}
+                        <p class="publication-venue">
+                          {% if publication.venue %}{{ publication.venue }}{% endif %}
+                          {% if publication.status %}
+                            {% if publication.venue %} · {% endif %}{{ publication.status }}
+                          {% endif %}
+                          {% if publication.year %}
+                            {% if publication.venue or publication.status %} · {% endif %}{{ publication.year }}
+                          {% endif %}
+                        </p>
                       {% endif %}
-                      {% if publication.year %}
-                        {% if publication.venue or publication.status %} · {% endif %}{{ publication.year }}
+
+                      {% if publication.links %}
+                        <div class="publication-links">
+                          {% for link in publication.links %}
+                            <a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
+                          {% endfor %}
+                        </div>
                       {% endif %}
-                    </p>
+                    </div>
                   {% endif %}
 
                   {% if publication.awards %}
                     <div class="publication-awards" aria-label="Awards">
                       {% for award in publication.awards %}
                         <span class="award-badge">{{ award }}</span>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
-
-                  {% if publication.links %}
-                    <div class="publication-links">
-                      {% for link in publication.links %}
-                        <a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
                       {% endfor %}
                     </div>
                   {% endif %}
