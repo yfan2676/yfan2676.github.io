@@ -293,12 +293,21 @@ h3 {
   padding: 20px;
 }
 
+.publication-teaser {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+}
+
 .publication-teaser img,
 .publication-placeholder {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border: 1px solid var(--line);
+  height: 100%;
+  object-fit: contain;
   background: var(--surface-muted);
 }
 

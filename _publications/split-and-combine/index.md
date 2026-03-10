@@ -9,7 +9,7 @@ venue: "MobiCom"
 status: "Poster"
 year: 2025
 date: 2025-08-01
-teaser: teaser.svg
+teaser: teaser.png
 links:
   - label: DBLP
     url: https://dblp.org/rec/conf/mobicom/FanX025
