@@ -20,6 +20,9 @@ date: 2026-05-01
 teaser: teaser.png
 awards:
   - "🏆 Best Paper Honorable Mention"
+links:
+  - label: COMING SOON
+    url: 
 ---
 
 * Equal contribution.
