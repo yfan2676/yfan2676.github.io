@@ -10,7 +10,7 @@ authors:
 venue: "arXiv"
 year: 2025
 date: 2025-04-01
-teaser: teaser.svg
+teaser: teaser.png
 links:
   - label: arXiv
     url: https://arxiv.org/abs/2504.03748

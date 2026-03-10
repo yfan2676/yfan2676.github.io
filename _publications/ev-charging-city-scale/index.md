@@ -15,6 +15,7 @@ authors:
 venue: "ACM e-Energy"
 year: 2023
 date: 2023-06-01
+teaser: teaser.png
 links:
   - label: DOI
     url: https://doi.org/10.1145/3575813.3597350

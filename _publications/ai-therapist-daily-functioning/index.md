@@ -13,6 +13,7 @@ authors:
 venue: "SenSys"
 year: 2023
 date: 2023-01-01
+teaser: teaser.png
 awards:
   - "🏆 Best Demo Runner-Up"
 links:
