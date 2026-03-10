@@ -113,8 +113,8 @@ code {
 
 .main-layout {
   display: grid;
-  grid-template-columns: minmax(220px, 270px) minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: minmax(170px, 210px) minmax(0, 1fr);
+  gap: 36px;
 }
 
 .eyebrow {
@@ -139,25 +139,29 @@ h3 {
   top: 104px;
   align-self: start;
   display: grid;
-  gap: 20px;
-  padding: 22px;
-  margin-left: -40px;
+  gap: 16px;
+  padding: 8px 0 8px 16px;
+  margin-left: -64px;
+  background: transparent;
+  border: 0;
+  border-left: 4px solid var(--accent);
+  box-shadow: none;
 }
 
 .profile-card h1 {
-  font-size: clamp(2.8rem, 5vw, 4.6rem);
-  line-height: 0.95;
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  line-height: 0.98;
 }
 
 .profile-card-body {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .profile-role {
   margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
 .profile-affiliation,
@@ -174,13 +178,14 @@ h3 {
 
 .profile-affiliation {
   margin: 0;
-  font-size: 0.98rem;
+  font-size: 0.92rem;
 }
 
 .profile-email {
   margin: 0;
   color: var(--text);
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.45;
   word-break: break-word;
 }
 
@@ -189,10 +194,15 @@ h3 {
 }
 
 .link-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
   margin-top: 8px;
+}
+
+.profile-card .icon-link {
+  width: 100%;
+  min-width: 0;
 }
 
 .link-row a,
@@ -219,14 +229,14 @@ h3 {
 .profile-photo {
   display: block;
   width: 100%;
-  max-width: 220px;
+  max-width: 150px;
   height: auto;
   justify-self: start;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: 18px;
   background: var(--surface-muted);
 }
 
@@ -542,6 +552,10 @@ h3 {
     top: auto;
     max-width: none;
     margin-left: 0;
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
   }
 
   .profile-photo {
