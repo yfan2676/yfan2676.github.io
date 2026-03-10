@@ -17,6 +17,7 @@ authors:
 venue: "CHI"
 year: 2026
 date: 2026-05-01
+teaser: teaser.png
 awards:
   - "🏆 Best Paper Honorable Mention"
 ---
