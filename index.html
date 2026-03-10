@@ -192,10 +192,6 @@ layout: null
           <div class="section-heading">
             <p class="eyebrow">Publications</p>
             <h2>Selected publications</h2>
-            <p class="section-note">
-              Add a new subfolder in <code>_publications/</code> by copying the template.
-              GitHub Pages will include it automatically on the next build.
-            </p>
           </div>
 
           {% assign publications = site.publications | where_exp: "item", "item.published != false" | sort: "date" | reverse %}
@@ -210,7 +206,7 @@ layout: null
                       loading="lazy"
                     />
                   {% else %}
-                    <div class="publication-placeholder">No teaser image</div>
+                    <div class="publication-placeholder" aria-hidden="true">Publication</div>
                   {% endif %}
                 </div>
                 <div class="publication-body">
@@ -371,7 +367,6 @@ layout: null
       </main>
 
       <footer class="site-footer">
-        <p>Static site for research and publication updates.</p>
         <p>&copy; <span id="year"></span> Yuang Fan</p>
       </footer>
     </div>
