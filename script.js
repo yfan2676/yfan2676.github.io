@@ -4,16 +4,22 @@ if (yearEl) {
 }
 
 const sections = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-sections.forEach((section) => observer.observe(section));
+if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+  sections.forEach((section) => section.classList.add("is-visible"));
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">FMSys daily functioning teaser</title>
+  <desc id="desc">Abstract teaser for the smart-home daily functioning paper.</desc>
+  <rect width="640" height="360" fill="#f8fafc"/>
+  <rect x="28" y="28" width="584" height="304" rx="12" fill="#ffffff" stroke="#d7dde5" stroke-width="2"/>
+  <path d="M94 204 V132 L152 88 L210 132 V204" fill="#edf2f8"/>
+  <rect x="118" y="152" width="28" height="52" fill="#c9d7eb"/>
+  <rect x="160" y="144" width="28" height="28" fill="#c9d7eb"/>
+  <circle cx="282" cy="142" r="44" fill="#edf2f8"/>
+  <path d="M262 154 L278 170 L306 126" fill="none" stroke="#1e3a66" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="372" y="90" width="170" height="14" fill="#1e3a66"/>
+  <rect x="372" y="124" width="146" height="10" fill="#9aa8ba"/>
+  <rect x="372" y="146" width="136" height="10" fill="#9aa8ba"/>
+  <text x="372" y="184" fill="#1e3a66" font-family="IBM Plex Sans, sans-serif" font-size="29" font-weight="600">Smart Home Vision</text>
+</svg>

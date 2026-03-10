@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} | Yuang Fan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="{{ '/' | relative_url }}">Yuang Fan</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="{{ '/#publications' | relative_url }}">Back to Publications</a>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Publication</p>
+            <h1>{{ page.title }}</h1>
+          </div>
+
+          {% if page.teaser %}
+            <div class="publication-teaser">
+              <img
+                src="{{ '/publications/' | append: page.slug | append: '/' | append: page.teaser | relative_url }}"
+                alt="{{ page.title }} teaser"
+              />
+            </div>
+          {% endif %}
+
+          {% if page.authors %}
+            <p class="publication-authors">
+              {% if page.authors.first %}
+                {{ page.authors | join: ", " }}
+              {% else %}
+                {{ page.authors }}
+              {% endif %}
+            </p>
+          {% endif %}
+
+          {% if page.venue or page.status or page.year %}
+            <p class="publication-venue">
+              {% if page.venue %}{{ page.venue }}{% endif %}
+              {% if page.status %}
+                {% if page.venue %} · {% endif %}{{ page.status }}
+              {% endif %}
+              {% if page.year %}
+                {% if page.venue or page.status %} · {% endif %}{{ page.year }}
+              {% endif %}
+            </p>
+          {% endif %}
+
+          {% if page.links %}
+            <div class="publication-links">
+              {% for link in page.links %}
+                <a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% assign page_content = content | strip %}
+          {% if page_content != "" %}
+            <div class="publication-content">
+              {{ content }}
+            </div>
+          {% endif %}
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

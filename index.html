@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,10 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
   </head>
   <body>
     <div class="page-shell">
@@ -24,44 +27,47 @@
           <a href="#about">About</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <a href="#trajectory">Trajectory</a>
+          <a href="#trajectory">CV</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <main id="top">
-        <section class="hero reveal">
-          <div class="hero-copy">
+      <main id="top" class="site-main">
+        <section class="intro reveal">
+          <div class="intro-copy">
             <p class="eyebrow">Columbia University · Intelligent and Connected Systems Lab</p>
-            <h1>
-              Human-centered AI, multimodal sensing, and mobile systems for health and
-              everyday environments.
-            </h1>
-            <p class="lede">
-              I am Yuang Fan, a PhD student in Electrical Engineering at Columbia University,
-              advised by Xiaofan Jiang. My recent work spans computer vision, foundation
-              models, multimodal biosignal datasets, and mobile sensing systems.
+            <h1>Yuang Fan</h1>
+            <p class="intro-role">
+              PhD student in Electrical Engineering working on multimodal sensing, mobile
+              systems, and human-centered AI.
             </p>
-            <div class="hero-actions">
-              <a class="button primary" href="https://scholar.google.com/citations?user=o9MbjYQAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-              <a class="button" href="https://openreview.net/profile?id=~Yuang_Fan1" target="_blank" rel="noreferrer">OpenReview</a>
-              <a class="button" href="https://github.com/yfan2676" target="_blank" rel="noreferrer">GitHub</a>
+            <p class="intro-summary">
+              My research focuses on computer vision, acoustic sensing, foundation models,
+              and deployable systems for health and everyday environments.
+            </p>
+            <div class="link-row">
+              <a href="https://scholar.google.com/citations?user=o9MbjYQAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+              <a href="https://openreview.net/profile?id=~Yuang_Fan1" target="_blank" rel="noreferrer">OpenReview</a>
+              <a href="https://github.com/yfan2676" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
-          <aside class="hero-card">
-            <div class="monogram" aria-hidden="true">YF</div>
-            <dl class="profile-meta">
-              <div>
-                <dt>Current role</dt>
-                <dd>PhD Student, Electrical Engineering</dd>
-              </div>
+          <aside class="intro-panel" aria-label="Profile details">
+            <dl class="profile-list">
               <div>
                 <dt>Affiliation</dt>
                 <dd>Columbia University</dd>
               </div>
               <div>
-                <dt>Focus</dt>
-                <dd>Multimodal sensing, CV, mobile health, foundation models</dd>
+                <dt>Lab</dt>
+                <dd>Intelligent and Connected Systems Lab</dd>
+              </div>
+              <div>
+                <dt>Research Areas</dt>
+                <dd>Multimodal sensing, vision, mobile health, foundation models</dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:yf2676@columbia.edu">yf2676@columbia.edu</a></dd>
               </div>
             </dl>
           </aside>
@@ -70,52 +76,48 @@
         <section class="section reveal" id="about">
           <div class="section-heading">
             <p class="eyebrow">About</p>
-            <h2>Research with measurable impact in the physical world.</h2>
+            <h2>Research grounded in real-world signals and deployment constraints.</h2>
           </div>
-          <div class="two-column">
+          <div class="prose-grid">
             <p>
-              My work sits at the intersection of sensing, machine learning, and
-              human-centered systems. I am interested in how AI systems can interpret
-              real-world signals such as images, speech, breathing, and environmental audio
-              to support health, wellbeing, and intelligent environments.
+              I study how AI systems can interpret images, speech, breathing, and
+              environmental audio to support health, wellbeing, and intelligent
+              environments. I am especially interested in models and sensing pipelines that
+              remain useful outside of carefully controlled lab settings.
             </p>
             <p>
-              Public records currently list my academic path as NYU Computer Science
-              (2019-2023), Columbia Computer Science MS (2023-2025), and Columbia Electrical
-              Engineering PhD (2025-present). This site is a curated summary of that record
-              and selected publications.
+              My recent work spans top-down visual reasoning benchmarks, contactless audio
+              sensing for exercise, multimodal physiological datasets, and foundation-model
+              applications in healthcare-adjacent settings.
             </p>
           </div>
         </section>
 
         <section class="section reveal" id="research">
           <div class="section-heading">
-            <p class="eyebrow">Research Themes</p>
+            <p class="eyebrow">Research</p>
             <h2>Current directions</h2>
           </div>
-          <div class="grid cards-3">
-            <article class="card">
-              <span class="tag">Vision + LLMs</span>
-              <h3>Top-down visual understanding</h3>
+          <div class="research-list">
+            <article>
+              <h3>Multimodal sensing for health</h3>
               <p>
-                Evaluating how vision-language models reason about overhead and spatially
-                structured scenes through new benchmarks and failure analysis.
+                Building audio and biosignal systems that estimate exercise and physiological
+                states from everyday devices and unconstrained environments.
               </p>
             </article>
-            <article class="card">
-              <span class="tag">Mobile Health</span>
-              <h3>Audio-based sensing in the wild</h3>
+            <article>
+              <h3>Vision-language model evaluation</h3>
               <p>
-                Building contactless, deployable systems that estimate exercise and health
-                signals from everyday mobile devices in noisy environments.
+                Studying how multimodal foundation models reason about top-down imagery,
+                scene structure, and spatial relationships.
               </p>
             </article>
-            <article class="card">
-              <span class="tag">AI for Care</span>
-              <h3>Foundation models for daily functioning</h3>
+            <article>
+              <h3>Human-centered AI systems</h3>
               <p>
-                Exploring multimodal AI systems that support screening, interpretation, and
-                intervention in smart-home and psychotherapeutic settings.
+                Exploring AI tools for screening, interpretation, and intervention in smart
+                environments with attention to practical deployment and user impact.
               </p>
             </article>
           </div>
@@ -123,95 +125,71 @@
 
         <section class="section reveal" id="publications">
           <div class="section-heading">
-            <p class="eyebrow">Selected Publications</p>
-            <h2>Recent papers and projects</h2>
+            <p class="eyebrow">Publications</p>
+            <h2>Selected papers</h2>
+            <p class="section-note">
+              Add a new subfolder in <code>_publications/</code> by copying the template.
+              GitHub Pages will include it automatically on the next build.
+            </p>
           </div>
+
+          {% assign publications = site.publications | where_exp: "item", "item.published != false" | sort: "date" | reverse %}
           <div class="publication-list">
-            <article class="publication">
-              <div class="pub-meta">
-                <span>ICLR 2026 submission</span>
-                <span>Benchmarking</span>
-              </div>
-              <h3>TDBench: Benchmarking Vision Language Models on Top-Down Image Understanding</h3>
-              <p>
-                A benchmark for studying how multimodal foundation models understand
-                top-down imagery and spatial reasoning tasks.
-              </p>
-              <a href="https://openreview.net/forum?id=3Pf8UOO4lh" target="_blank" rel="noreferrer">OpenReview</a>
-            </article>
+            {% for publication in publications %}
+              <article class="publication-item">
+                <div class="publication-teaser">
+                  {% if publication.teaser %}
+                    <img
+                      src="{{ '/publications/' | append: publication.slug | append: '/' | append: publication.teaser | relative_url }}"
+                      alt="{{ publication.title }} teaser"
+                      loading="lazy"
+                    />
+                  {% else %}
+                    <div class="publication-placeholder">No teaser image</div>
+                  {% endif %}
+                </div>
+                <div class="publication-body">
+                  <h3>{{ publication.title }}</h3>
 
-            <article class="publication">
-              <div class="pub-meta">
-                <span>MobiCom 2025</span>
-                <span>Vision systems</span>
-              </div>
-              <h3>Poster: Split-and-Combine Rectification of Ultra-Wide Fisheye Images into Cubemaps</h3>
-              <p>
-                A split-and-combine framework for rectifying ultra-wide fisheye images into
-                cubemap faces for downstream perception in drones, vehicles, and surveillance
-                settings.
-              </p>
-              <a href="https://dblp.org/rec/conf/mobicom/FanX025" target="_blank" rel="noreferrer">DBLP</a>
-            </article>
+                  {% if publication.authors %}
+                    <p class="publication-authors">
+                      {% if publication.authors.first %}
+                        {{ publication.authors | join: ", " }}
+                      {% else %}
+                        {{ publication.authors }}
+                      {% endif %}
+                    </p>
+                  {% endif %}
 
-            <article class="publication">
-              <div class="pub-meta">
-                <span>IMWUT / UbiComp 2025</span>
-                <span>Mobile sensing</span>
-              </div>
-              <h3>SoundTrack: A Contactless Mobile Solution for Real-time Running Metric Estimation for Treadmill Running in the Wild</h3>
-              <p>
-                A contactless mobile system for estimating cadence and ground contact time
-                from treadmill running audio collected in public gyms.
-              </p>
-              <a href="https://doi.org/10.1145/3729486" target="_blank" rel="noreferrer">DOI</a>
-            </article>
+                  {% if publication.venue or publication.status or publication.year %}
+                    <p class="publication-venue">
+                      {% if publication.venue %}{{ publication.venue }}{% endif %}
+                      {% if publication.status %}
+                        {% if publication.venue %} · {% endif %}{{ publication.status }}
+                      {% endif %}
+                      {% if publication.year %}
+                        {% if publication.venue or publication.status %} · {% endif %}{{ publication.year }}
+                      {% endif %}
+                    </p>
+                  {% endif %}
 
-            <article class="publication">
-              <div class="pub-meta">
-                <span>SenSys 2025</span>
-                <span>Dataset</span>
-              </div>
-              <h3>Multi-Modal Dataset Across Exertion Levels: Capturing Post-Exercise Speech, Breathing, and Phonocardiogram</h3>
-              <p>
-                A multimodal dataset spanning speech, breathing, and heart sounds after
-                cardio exercise to support robust physiological sensing research.
-              </p>
-              <a href="https://github.com/Columbia-ICSL/data_after_cardio/tree/main" target="_blank" rel="noreferrer">Dataset</a>
-            </article>
-
-            <article class="publication">
-              <div class="pub-meta">
-                <span>ACM TCH / 2025</span>
-                <span>LLMs in health</span>
-              </div>
-              <h3>LLM-based Conversational AI Therapist for Daily Functioning Screening and Psychotherapeutic Intervention via Everyday Smart Devices</h3>
-              <p>
-                A conversational AI therapist system for daily functioning screening and
-                psychotherapeutic intervention through smart devices.
-              </p>
-              <a href="https://doi.org/10.1145/3712299" target="_blank" rel="noreferrer">DOI</a>
-            </article>
-
-            <article class="publication">
-              <div class="pub-meta">
-                <span>IEEE FMSys 2024</span>
-                <span>Foundation models</span>
-              </div>
-              <h3>Exploring Foundation Models in Detecting Concerning Daily Functioning in Psychotherapeutic Context Based on Images from Smart Home Devices</h3>
-              <p>
-                Investigating whether foundation models can detect signs of concerning daily
-                functioning from images captured in smart-home settings.
-              </p>
-              <a href="https://doi.org/10.1109/FMSys62467.2024.00012" target="_blank" rel="noreferrer">DOI</a>
-            </article>
+                  {% if publication.links %}
+                    <div class="publication-links">
+                      {% for link in publication.links %}
+                        <a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              </article>
+            {% endfor %}
           </div>
         </section>
 
         <section class="section reveal" id="trajectory">
           <div class="section-heading">
-            <p class="eyebrow">Trajectory</p>
-            <h2>Academic path and service</h2>
+            <p class="eyebrow">CV</p>
+            <h2>Education and service</h2>
           </div>
           <div class="timeline">
             <article class="timeline-item">
@@ -225,7 +203,7 @@
               <span class="timeline-year">2025</span>
               <div>
                 <h3>Workshop Service</h3>
-                <p>Social Media Chair for HumanSys 2025.</p>
+                <p>Social Media Chair, HumanSys 2025.</p>
               </div>
             </article>
             <article class="timeline-item">
@@ -238,7 +216,7 @@
             <article class="timeline-item">
               <span class="timeline-year">2019-2023</span>
               <div>
-                <h3>Undergraduate Studies in Computer Science</h3>
+                <h3>BS in Computer Science</h3>
                 <p>New York University.</p>
               </div>
             </article>
@@ -248,9 +226,9 @@
         <section class="section reveal" id="contact">
           <div class="section-heading">
             <p class="eyebrow">Contact</p>
-            <h2>Links and profiles</h2>
+            <h2>Links</h2>
           </div>
-          <div class="contact-panel">
+          <div class="contact-list">
             <a href="mailto:yf2676@columbia.edu">yf2676@columbia.edu</a>
             <a href="https://icsl.ee.columbia.edu/people/" target="_blank" rel="noreferrer">Columbia ICSL</a>
             <a href="https://scholar.google.com/citations?user=o9MbjYQAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
@@ -261,16 +239,11 @@
       </main>
 
       <footer class="site-footer">
-        <p>
-          Built as a static GitHub Pages site. Publication and academic-history details were
-          compiled from public sources including OpenReview, Columbia ICSL, DBLP-indexed
-          records, and linked paper pages because Google Scholar blocks direct automated
-          access.
-        </p>
+        <p>Static site for research and publication updates.</p>
         <p>&copy; <span id="year"></span> Yuang Fan</p>
       </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="{{ '/script.js' | relative_url }}"></script>
   </body>
 </html>

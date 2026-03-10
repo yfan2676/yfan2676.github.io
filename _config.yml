@@ -1,0 +1,16 @@
+title: Yuang Fan
+
+collections:
+  publications:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+      permalink: /publications/:title/
+
+exclude:
+  - README.md

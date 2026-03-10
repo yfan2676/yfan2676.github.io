@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">LLM therapist teaser</title>
+  <desc id="desc">Abstract teaser for the conversational AI therapist paper.</desc>
+  <rect width="640" height="360" fill="#f8fafc"/>
+  <rect x="28" y="28" width="584" height="304" rx="12" fill="#ffffff" stroke="#d7dde5" stroke-width="2"/>
+  <circle cx="138" cy="138" r="44" fill="#edf2f8"/>
+  <circle cx="252" cy="138" r="44" fill="#edf2f8"/>
+  <path d="M118 188 H158 L150 214 H126 Z" fill="#c9d7eb"/>
+  <path d="M232 188 H272 L264 214 H240 Z" fill="#c9d7eb"/>
+  <rect x="344" y="90" width="186" height="14" fill="#1e3a66"/>
+  <rect x="344" y="124" width="168" height="10" fill="#9aa8ba"/>
+  <rect x="344" y="146" width="142" height="10" fill="#9aa8ba"/>
+  <rect x="92" y="252" width="448" height="12" fill="#c9d3df"/>
+  <text x="344" y="184" fill="#1e3a66" font-family="IBM Plex Sans, sans-serif" font-size="28" font-weight="600">Conversational AI</text>
+</svg>
