@@ -85,8 +85,7 @@ code {
 .brand,
 .site-nav a,
 .link-row a,
-.publication-links a,
-.contact-list a {
+.publication-links a {
   text-decoration: none;
 }
 
@@ -208,8 +207,7 @@ h3 {
 }
 
 .link-row a,
-.publication-links a,
-.contact-list a {
+.publication-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -222,7 +220,6 @@ h3 {
 
 .link-row a:hover,
 .publication-links a:hover,
-.contact-list a:hover,
 .site-nav a:hover {
   border-color: var(--accent);
   color: var(--accent);
@@ -495,9 +492,43 @@ h3 {
 }
 
 .contact-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 12px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+}
+
+.contact-item:hover {
+  color: var(--accent);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.contact-text {
+  color: var(--text);
+  line-height: 1.5;
+  word-break: break-word;
 }
 
 .icon-link {
