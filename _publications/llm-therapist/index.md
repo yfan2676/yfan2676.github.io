@@ -12,7 +12,7 @@ authors:
 venue: "ACM TCH"
 year: 2025
 date: 2025-02-01
-teaser: teaser.svg
+teaser: teaser.png
 links:
   - label: DOI
     url: https://doi.org/10.1145/3712299

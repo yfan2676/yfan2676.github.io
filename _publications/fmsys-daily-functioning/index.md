@@ -9,7 +9,7 @@ authors:
 venue: "IEEE FMSys"
 year: 2024
 date: 2024-10-01
-teaser: teaser.svg
+teaser: teaser.png
 links:
   - label: DOI
     url: https://doi.org/10.1109/FMSys62467.2024.00012

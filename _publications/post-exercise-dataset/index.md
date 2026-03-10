@@ -12,7 +12,7 @@ authors:
 venue: "SenSys"
 year: 2025
 date: 2025-04-01
-teaser: teaser.svg
+teaser: teaser.png
 links:
   - label: Dataset
     url: https://github.com/Columbia-ICSL/data_after_cardio/tree/main
