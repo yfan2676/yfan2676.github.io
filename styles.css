@@ -472,6 +472,15 @@ h3 {
   line-height: 1.15;
 }
 
+.compact-subheading {
+  margin: 20px 0 0;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .compact-list {
   display: grid;
   gap: 14px;
@@ -490,6 +499,11 @@ h3 {
 .compact-list li:first-child {
   padding-top: 0;
   border-top: 0;
+}
+
+.compact-list-secondary li:first-child {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
 }
 
 .compact-list span {
