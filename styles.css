@@ -247,6 +247,21 @@ h3 {
   gap: 24px;
 }
 
+.about-prose {
+  grid-template-columns: 1fr;
+  max-width: 48rem;
+}
+
+.about-prose p,
+.about-prose a {
+  color: var(--text);
+}
+
+.about-prose a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
 .prose-span {
   grid-column: 1 / -1;
 }
