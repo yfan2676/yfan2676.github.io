@@ -9,7 +9,7 @@ authors:
   - Haoxuan You
   - Matthias Preindl
   - Xiaofan Jiang
-venue: "ACM TCH"
+venue: "ACM HEALTH"
 year: 2025
 date: 2025-02-01
 teaser: teaser.png

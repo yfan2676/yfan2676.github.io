@@ -13,6 +13,8 @@ authors:
 venue: "SenSys"
 year: 2023
 date: 2023-01-01
+awards:
+  - "🏆 Best Demo Runner-Up"
 links:
   - label: DOI
     url: https://doi.org/10.1145/3560905.3568074
