@@ -11,6 +11,7 @@ authors:
   - Matthias Preindl
   - Xiaofan Jiang
 venue: "SenSys"
+status: "Demo"
 year: 2023
 date: 2023-01-01
 teaser: teaser.png
