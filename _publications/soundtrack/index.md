@@ -16,6 +16,6 @@ teaser: teaser.png
 links:
   - label: ACM DL
     url: https://doi.org/10.1145/3729486
-  - label: DATASET
+  - label: Dataset
     url: https://github.com/Columbia-ICSL/SoundTrackDB
 ---
