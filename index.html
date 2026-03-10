@@ -188,10 +188,10 @@ layout: null
                   {% if publication.authors %}
                     <p class="publication-authors">
                       {% if publication.authors.first %}
-                        {% assign authors_text = publication.authors | join: ", " | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" %}
+                        {% assign authors_text = publication.authors | join: ", " | replace: "Yuang Fan*", "<strong>Yuang Fan*</strong>" | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang*", "<strong>Fan, Yuang*</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" %}
                         {{ authors_text }}
                       {% else %}
-                        {{ publication.authors | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" }}
+                        {{ publication.authors | replace: "Yuang Fan*", "<strong>Yuang Fan*</strong>" | replace: "Yuang Fan", "<strong>Yuang Fan</strong>" | replace: "Fan, Yuang*", "<strong>Fan, Yuang*</strong>" | replace: "Fan, Yuang", "<strong>Fan, Yuang</strong>" }}
                       {% endif %}
                     </p>
                   {% endif %}
@@ -206,6 +206,14 @@ layout: null
                         {% if publication.venue or publication.status %} · {% endif %}{{ publication.year }}
                       {% endif %}
                     </p>
+                  {% endif %}
+
+                  {% if publication.awards %}
+                    <div class="publication-awards" aria-label="Awards">
+                      {% for award in publication.awards %}
+                        <span class="award-badge">{{ award }}</span>
+                      {% endfor %}
+                    </div>
                   {% endif %}
 
                   {% if publication.links %}

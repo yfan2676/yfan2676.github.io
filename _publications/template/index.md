@@ -10,6 +10,8 @@ status: "Optional note"
 year: 2026
 date: 2026-01-01
 teaser: teaser.svg
+awards:
+  - Best Paper Honorable Mention
 links:
   - label: Paper
     url: https://example.com

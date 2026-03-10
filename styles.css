@@ -364,6 +364,26 @@ h3 {
   font-size: 0.98rem;
 }
 
+.publication-awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid #d8c58a;
+  border-radius: 999px;
+  background: #fff8e3;
+  color: #6d5408;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .publication-links {
   display: flex;
   flex-wrap: wrap;
