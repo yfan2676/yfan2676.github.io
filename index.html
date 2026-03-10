@@ -31,19 +31,20 @@ layout: null
         </nav>
       </header>
 
-      <main id="top" class="site-main">
-        <section class="intro reveal">
-          <div class="intro-copy">
+      <div class="main-layout">
+        <aside id="top" class="profile-card reveal" aria-label="Profile card">
+          <img
+            class="profile-photo"
+            src="{{ '/cropped-yuangfan_photo.jpg' | relative_url }}"
+            alt="Portrait of Yuang Fan"
+            width="600"
+            height="600"
+          />
+          <div class="profile-card-body">
             <p class="eyebrow">Columbia University</p>
             <h1>Yuang Fan</h1>
-            <p class="intro-role">
-              PhD student in Electrical Engineering working on foundation models and
-              LLMs for health.
-            </p>
-            <p class="intro-summary">
-              My work combines reinforcement learning, multimodal reasoning, and
-              real-world sensing systems to make AI more reliable in healthcare settings.
-            </p>
+            <p class="profile-role">PhD Student in Electrical Engineering</p>
+            <p class="profile-affiliation">Columbia University</p>
             <div class="link-row" aria-label="Primary links">
               <a
                 class="icon-link"
@@ -106,46 +107,52 @@ layout: null
                 </svg>
                 <span class="sr-only">GitHub</span>
               </a>
+              <a
+                class="icon-link"
+                href="https://www.linkedin.com/in/yuang-fan/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+                title="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6.75 8.25a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5.5 9.75h2.5v8.75H5.5zm4.25 0h2.4v1.2h.03c.33-.63 1.14-1.29 2.35-1.29 2.52 0 2.99 1.66 2.99 3.81v5.03h-2.5v-4.46c0-1.06-.02-2.43-1.48-2.43-1.49 0-1.72 1.16-1.72 2.35v4.54h-2.5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="sr-only">LinkedIn</span>
+              </a>
             </div>
           </div>
-          <aside class="intro-panel" aria-label="Profile details">
-            <img
-              class="profile-photo"
-              src="{{ '/cropped-yuangfan_photo.jpg' | relative_url }}"
-              alt="Portrait of Yuang Fan"
-              width="600"
-              height="600"
-            />
-            <dl class="profile-list">
-              <div>
-                <dt>Affiliation</dt>
-                <dd>Columbia University</dd>
-              </div>
-              <div>
-                <dt>Research Areas</dt>
-                <dd>LLMs for health, RL, multimodal reasoning, real-world sensing</dd>
-              </div>
-              <div>
-                <dt>Email</dt>
-                <dd><a href="mailto:yf2676@columbia.edu">yf2676@columbia.edu</a></dd>
-              </div>
-            </dl>
-          </aside>
-        </section>
+        </aside>
 
-        <section class="section reveal" id="about">
+        <main class="site-main">
+          <section class="section reveal" id="about">
           <div class="section-heading">
             <p class="eyebrow">About</p>
-            <h2>Foundation models for health, grounded in real-world data.</h2>
+            <h2>Building robust foundation models for health in the real world.</h2>
           </div>
           <div class="prose-grid">
             <p>
-              I study LLMs and foundation models for health, with an emphasis on
-              robustness and generalization in real-world settings.
+              I am a PhD student in Electrical Engineering at Columbia University,
+              advised by Xiaofan Jiang and Xuhai Xu. Before starting my PhD, I earned
+              an MS in Computer Science from Columbia University and a BA in Computer
+              Science from New York University, where I graduated summa cum laude.
             </p>
             <p>
-              My methods include reinforcement learning, multimodal reasoning, and
-              sensing systems that operate on noisy behavioral, sensor, and visual data.
+              My research focuses on LLMs and foundation models for health, especially
+              how to make them more reliable, adaptive, and useful when deployed with
+              noisy multimodal data. I am interested in reinforcement learning,
+              multimodal reasoning, and sensing systems that connect language models
+              with behavioral, physiological, and visual signals in real-world care
+              settings.
+            </p>
+            <p class="prose-span">
+              More broadly, I aim to build AI systems that can support health and
+              well-being beyond idealized benchmarks: models that personalize to
+              people over time, reason across heterogeneous data sources, and remain
+              trustworthy in the messy environments where they are actually used.
             </p>
           </div>
         </section>
@@ -357,7 +364,8 @@ layout: null
             </a>
           </div>
         </section>
-      </main>
+        </main>
+      </div>
 
       <footer class="site-footer">
         <p>&copy; <span id="year"></span> Yuang Fan</p>
