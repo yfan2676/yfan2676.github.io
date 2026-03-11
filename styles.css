@@ -702,19 +702,24 @@ h3 {
   .site-header {
     position: sticky;
     top: 10px;
-    width: auto;
+    width: 100%;
+    max-width: 100%;
     margin-left: 0;
+    margin-right: 0;
     display: grid;
     gap: 14px;
     padding: 14px 16px;
   }
 
   .site-footer {
-    width: auto;
+    width: 100%;
+    max-width: 100%;
     margin-left: 0;
+    margin-right: 0;
   }
 
   .site-nav {
+    min-width: 0;
     width: 100%;
     flex-wrap: nowrap;
     gap: 10px;
