@@ -692,7 +692,7 @@ h3 {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .page-shell {
     width: min(calc(100% - 20px), var(--max-width));
     padding-top: 16px;
@@ -788,7 +788,6 @@ h3 {
   }
 
   .profile-role {
-    max-width: 14ch;
     font-size: 0.96rem;
   }
 
@@ -849,5 +848,25 @@ h3 {
 
   .publication-body h3 {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .profile-photo {
+    justify-self: start;
+    width: 96px;
+  }
+
+  .profile-role {
+    max-width: none;
+  }
+
+  .link-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
