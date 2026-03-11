@@ -58,6 +58,11 @@ code {
   padding: 28px 0 56px;
 }
 
+#top,
+.section {
+  scroll-margin-top: 104px;
+}
+
 .site-header,
 .profile-card,
 .section,
@@ -644,16 +649,28 @@ h3 {
   .profile-card {
     position: static;
     top: auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
     max-width: none;
     margin-left: 0;
-    padding: 22px;
+    padding: 24px;
     background: var(--surface);
     border: 1px solid var(--line);
     box-shadow: var(--shadow);
   }
 
+  .profile-card-body {
+    min-width: 0;
+  }
+
   .profile-photo {
-    max-width: 220px;
+    max-width: 180px;
+    justify-self: end;
+  }
+
+  .link-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .publication-teaser {
@@ -678,15 +695,18 @@ h3 {
 @media (max-width: 720px) {
   .page-shell {
     width: min(calc(100% - 20px), var(--max-width));
-    padding-top: 20px;
+    padding-top: 16px;
+    padding-bottom: 40px;
   }
 
   .site-header {
-    position: static;
+    position: sticky;
+    top: 10px;
     width: auto;
     margin-left: 0;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    gap: 14px;
+    padding: 14px 16px;
   }
 
   .site-footer {
@@ -694,17 +714,132 @@ h3 {
     margin-left: 0;
   }
 
+  .site-nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: var(--surface-muted);
+  }
+
+  .main-layout {
+    gap: 18px;
+  }
+
+  .site-main {
+    gap: 18px;
+  }
+
+  .profile-card,
+  .section,
+  .site-footer,
+  .publication-item {
+    border-radius: 24px;
+  }
+
   .profile-card,
   .section {
-    padding: 22px;
+    padding: 20px;
+  }
+
+  .profile-card {
+    position: relative;
+    grid-template-columns: minmax(0, 1fr) 112px;
+    align-items: end;
+    gap: 16px 14px;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at bottom right, rgba(30, 58, 102, 0.12), transparent 48%),
+      linear-gradient(145deg, #ffffff 0%, #fbfaf7 56%, #eef3f9 100%);
+  }
+
+  .profile-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .profile-card-body {
+    gap: 4px;
+  }
+
+  .profile-card .eyebrow {
+    margin-bottom: 10px;
   }
 
   .profile-card h1 {
-    font-size: clamp(2.5rem, 12vw, 3.4rem);
+    font-size: clamp(2.35rem, 12vw, 3rem);
+  }
+
+  .profile-role {
+    max-width: 14ch;
+    font-size: 0.96rem;
+  }
+
+  .profile-affiliation {
+    display: none;
+  }
+
+  .profile-photo {
+    width: 112px;
+    max-width: none;
+    border-radius: 20px;
+  }
+
+  .link-row {
+    grid-column: 1 / -1;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .link-row a {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
   }
 
   .section h2 {
     font-size: clamp(1.8rem, 8vw, 2.3rem);
+  }
+
+  #about {
+    order: 1;
+  }
+
+  #trajectory {
+    order: 2;
+  }
+
+  .detail-grid {
+    order: 3;
+    gap: 18px;
+  }
+
+  #publications {
+    order: 4;
+  }
+
+  #contact {
+    order: 5;
+  }
+
+  .publication-item {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .publication-teaser {
+    max-width: none;
   }
 
   .publication-body h3 {
