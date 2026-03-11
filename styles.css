@@ -638,60 +638,6 @@ h3 {
   }
 }
 
-@media (max-width: 980px) {
-  .main-layout,
-  .prose-grid,
-  .publication-item,
-  .detail-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-card {
-    position: static;
-    top: auto;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 20px;
-    max-width: none;
-    margin-left: 0;
-    padding: 24px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
-  }
-
-  .profile-card-body {
-    min-width: 0;
-  }
-
-  .profile-photo {
-    max-width: 180px;
-    justify-self: end;
-  }
-
-  .link-row {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .publication-teaser {
-    max-width: 360px;
-  }
-
-  .publication-meta-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .publication-meta-row .publication-links {
-    justify-content: flex-start;
-  }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-}
-
 @media (max-width: 860px) {
   .page-shell {
     width: min(calc(100% - 20px), var(--max-width));
@@ -740,11 +686,19 @@ h3 {
   }
 
   .main-layout {
+    grid-template-columns: 1fr;
     gap: 18px;
   }
 
   .site-main {
     gap: 18px;
+  }
+
+  .prose-grid,
+  .publication-item,
+  .detail-grid,
+  .timeline-item {
+    grid-template-columns: 1fr;
   }
 
   .profile-card,
@@ -760,11 +714,18 @@ h3 {
   }
 
   .profile-card {
+    top: auto;
     position: relative;
-    grid-template-columns: minmax(0, 1fr) 112px;
-    align-items: end;
-    gap: 16px 14px;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 16px;
+    max-width: none;
+    margin-left: 0;
     overflow: hidden;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
     background:
       radial-gradient(circle at bottom right, rgba(30, 58, 102, 0.12), transparent 48%),
       linear-gradient(145deg, #ffffff 0%, #fbfaf7 56%, #eef3f9 100%);
@@ -776,6 +737,7 @@ h3 {
   }
 
   .profile-card-body {
+    min-width: 0;
     gap: 4px;
   }
 
@@ -796,13 +758,14 @@ h3 {
   }
 
   .profile-photo {
-    width: 112px;
+    width: 96px;
     max-width: none;
+    justify-self: start;
     border-radius: 20px;
   }
 
   .link-row {
-    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
     margin-top: 12px;
   }
@@ -816,27 +779,6 @@ h3 {
     font-size: clamp(1.8rem, 8vw, 2.3rem);
   }
 
-  #about {
-    order: 1;
-  }
-
-  #trajectory {
-    order: 2;
-  }
-
-  .detail-grid {
-    order: 3;
-    gap: 18px;
-  }
-
-  #publications {
-    order: 4;
-  }
-
-  #contact {
-    order: 5;
-  }
-
   .publication-item {
     gap: 16px;
     padding: 16px;
@@ -846,27 +788,20 @@ h3 {
     max-width: none;
   }
 
+  .publication-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .publication-meta-row .publication-links {
+    justify-content: flex-start;
+  }
+
   .publication-body h3 {
     font-size: 1.25rem;
   }
-}
 
-@media (max-width: 560px) {
-  .profile-card {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-
-  .profile-photo {
-    justify-self: start;
-    width: 96px;
-  }
-
-  .profile-role {
-    max-width: none;
-  }
-
-  .link-row {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .timeline-item {
+    gap: 8px;
   }
 }
