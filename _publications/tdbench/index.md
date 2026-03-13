@@ -12,6 +12,6 @@ year: 2025
 date: 2025-04-01
 teaser: teaser.png
 links:
-  - label: arXiv
+  - label: Preprint
     url: https://arxiv.org/abs/2504.03748
 ---

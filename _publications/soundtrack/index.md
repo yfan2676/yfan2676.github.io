@@ -14,7 +14,7 @@ year: 2025
 date: 2025-06-01
 teaser: teaser.png
 links:
-  - label: ACM DL
+  - label: Paper
     url: https://doi.org/10.1145/3729486
   - label: Dataset
     url: https://github.com/Columbia-ICSL/SoundTrackDB

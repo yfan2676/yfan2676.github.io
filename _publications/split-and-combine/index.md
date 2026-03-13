@@ -11,6 +11,6 @@ year: 2025
 date: 2025-08-01
 teaser: teaser.png
 links:
-  - label: ACM DL
+  - label: Paper
     url: https://dl.acm.org/doi/pdf/10.1145/3680207.3765686
 ---

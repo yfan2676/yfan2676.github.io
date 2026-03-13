@@ -21,8 +21,8 @@ teaser: teaser.png
 awards:
   - "🏆 Best Paper Honorable Mention"
 links:
-  - label: COMING SOON
-    url: 
+  - label: Preprint
+    url: https://arxiv.org/abs/2603.06926
 ---
 
 * Equal contribution.
