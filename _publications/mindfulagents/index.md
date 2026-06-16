@@ -21,8 +21,8 @@ teaser: teaser.png
 awards:
   - "🏆 Best Paper Honorable Mention"
 links:
-  - label: Preprint
-    url: https://arxiv.org/abs/2603.06926
+  - label: Paper
+    url: https://dl.acm.org/doi/full/10.1145/3772318.3791817
 ---
 
 * Equal contribution.
