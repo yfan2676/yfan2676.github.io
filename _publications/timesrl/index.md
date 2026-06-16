@@ -16,6 +16,7 @@ authors:
 venue: "arXiv"
 year: 2026
 date: 2026-05-20
+teaser: teaser.png
 links:
   - label: Preprint
     url: https://arxiv.org/abs/2605.21295
