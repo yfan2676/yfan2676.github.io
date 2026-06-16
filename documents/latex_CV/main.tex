@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+\usepackage[backend=bibtex,style=ieee, maxbibnames=99]{biblatex} % Include biblatex package
+\addbibresource{publications.bib} % Specify the .bib file
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+
+\begin{document}
+
+\pagenumbering{gobble} % Turn off page numbering
+
+% Header
+\begin{center}
+    {\LARGE \textbf{Yuang Fan}}\\
+    \vspace{0.2cm}
+    {\small \faEnvelope\ \href{mailto:yf2676@columbia.edu}{yf2676@columbia.edu} \quad
+    \faGlobe\ \href{https://yuangfan.com}{yuangfan.com} \quad
+    \href{https://scholar.google.com/citations?user=o9MbjYQAAAAJ&hl=en}{\aiGoogleScholar} \quad
+    \href{https://www.linkedin.com/in/yuang-fan/}{\faLinkedin} \quad
+    \faPhone\ +1 (646) 668-0593}
+\end{center}
+
+% Research Interest
+\section*{Research Interest}
+My research focuses on advancing foundation models through reinforcement learning, multimodal reasoning, and real-world sensing integration. I am particularly interested in improving generalization, robustness, and abstraction capabilities of large language models when applied to longitudinal behavioral, sensor, and visual data. Broadly, I aim to bridge large-scale AI systems with real-world, noisy, and heterogeneous data environments, enabling foundation models to operate reliably in healthcare and embodied sensing contexts.
+
+\section*{Education}
+\noindent
+\begin{tabular}{@{}p{1.5in}p{5in}} % Reduced the first column width and increased the second
+2025 Jan -- Present & \textbf{Columbia University}, New York, NY \\
+             & Ph.D. in Electrical Engineering \\
+             & Advisors: Prof. Xiaofan Jiang and Prof. Xuhai Xu\\
+2023 Sept -- 2024 Dec & \textbf{Columbia University}, New York, NY \\
+             & M.S. in Computer Science \\
+             & GPA: 3.95\\
+2019 Sept -- 2023 May & \textbf{New York University}, New York, NY \\
+             & B.A. in Computer Science \\
+             & GPA: 3.97 | Summa Cum Laude \\
+\end{tabular}
+
+\section*{Honors and Awards}
+\noindent
+\begin{tabular}{@{}p{1in}p{5in}} % Reduced the first column width and increased the second
+2023         & Phi Beta Kappa Honor Society, New York University \\
+             \\
+2022         & Best Demo Award Runner-up, ACM SenSys '22 \\
+             \\
+2019 -- 2023 & Dean's List of Academic Year, New York University \\
+\end{tabular}
+
+% Publications
+\section*{Selected Publications}
+\nocite{*} % Include all entries from the BibTeX file without citing them explicitly in the text
+\printbibliography[heading=none] % Print the bibliography section without a heading
+
+\section*{Research Experiences}
+\noindent
+\begin{longtable}{@{}p{1in}p{5in}} % Apply the same adjustment here
+2025 -- Present & \textbf{PhD Researcher}, Columbia Intelligent and Connected Systems Lab (ICSL) \\
+               & Advisors: Prof. Xiaofan Jiang, Prof. Xuhai ``Orson'' Xu \\
+               & \begin{itemize}[leftmargin=*, nosep]
+                   \item[-] \textbf{RL-Tuned LLMs for Generalizable Mental Health Prediction.} Designed a two-stage reasoning framework in which a reasoning-oriented LLM (Qwen) first emits structured behavioral summaries from longitudinal wearable and smartphone sensor logs, then predicts depression and anxiety outcomes; trained with Group Relative Policy Optimization (GRPO) and reward shaping over summary quality to close cross-domain generalization gaps under heavy dataset heterogeneity and distribution shift. Built the end-to-end RL training and evaluation stack and scaled distributed training across multi-GPU Slurm clusters (H100/H200). \textbf{(under submission to ACM IMWUT)}
+                   \item[-] \textbf{Latent Diffusion Models for Fisheye Image Rectification.} Designed conditional latent diffusion models with multi-branch and ControlNet-style guidance to map ultra-wide fisheye captures to cubemap projections; introduced a split-and-combine training strategy to overcome paired-data scarcity. Implemented in PyTorch and Hugging Face Diffusers with perceptual and reconstruction losses. \textbf{(poster, ACM MobiCom '25)}
+                 \end{itemize} \\
+               \\
+2023 -- 2024 & \textbf{Graduate Research Assistant}, Columbia ICSL \\
+               & \begin{itemize}[leftmargin=*, nosep]
+                   \item[-] \textbf{SoundTrack: Acoustic Running-Metric Estimation on Smartphones.} Built an on-device ML system that infers cadence and ground contact time from treadmill running audio. Curated a 60+ user in-the-wild gym dataset; engineered MFCC and spectrogram features; trained multi-task PyTorch models reaching \textbf{2.11\% MAPE} (cadence) and \textbf{8.78\% MAPE} (GCT); deployed via TensorFlow Lite for real-time inference. \textbf{(poster, ACM MobiCom '24; full paper, ACM IMWUT '25)}
+                   \item[-] \textbf{Vision-Language Models for In-Home Psychotherapeutic Monitoring.} Benchmarked VLMs and LLMs for detecting concerning daily-functioning cues in smart-home device imagery, integrated into a precautionary monitoring pipeline. \textbf{(IEEE FMSys '24 @ CPS-IoT Week)}
+                   \item[-] \textbf{Mobile Mental Health Screening App.} Led the port of a browser-based screening tool to Flutter (Python backend, Google APIs) and redesigned the UX. Trained new CNNs for facial emotion recognition, lifting accuracy from \textbf{60\% to 70\%} while sustaining real-time on-device inference.
+                 \end{itemize} \\
+               \\
+2022           & \textbf{Undergraduate Research Assistant (Summer)}, Columbia ICSL \\
+               & \begin{itemize}[leftmargin=*, nosep]
+                   \item[-] \textbf{AI Therapist on Smart Home Devices.} Developed a Flutter front-end that turns existing smart home devices into a precautionary screening and intervention channel for daily functioning; ran user studies with \textbf{20 subjects across 40 sessions}, averaging \textbf{4.45/5.0} satisfaction. \textbf{(Best Demo Runner-up, ACM SenSys '22)}
+                   \item[-] \textbf{City-Scale EV Charging Recommendation.} Built a Flutter + Google Maps app that recommends EV charging routes in NYC by querying a deep-learning simulator over traffic, charger, and household-trip data. \textbf{(ACM e-Energy '23; ACM BuildSys '22)}
+                 \end{itemize} \\
+\end{longtable}
+
+\section*{Professional Services and Teaching}
+
+\noindent
+\textbf{Teaching Assistant} \\
+Columbia University, New York, NY
+\begin{itemize}[leftmargin=*, nosep]
+    \item[-] AIoT: Artificial Intelligence for Internet of Things, 2025
+    \item[-] Embedded AI, 2026
+\end{itemize}
+
+\noindent
+\textbf{Reviewer}
+\begin{itemize}[leftmargin=*, nosep]
+    \item[-] ACM IMWUT, 2025
+    \item[-] ACM Health Journal, 2025
+\end{itemize}
+
+
+
+\end{document}
